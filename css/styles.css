@@ -1,0 +1,36 @@
+body {
+  background-color: white;
+  color: navy;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: red;
+  text-align: center;
+}
+
+h2 {
+  color: blue;
+}
+
+p {
+  color: navy;
+}
+
+ul {
+  color: red;
+}
+
+a {
+  color: blue;
+}
+
+a:hover {
+  color: red;
+}
+
+div {
+  border: 2px solid red;
+  background-color: #f0f8ff;
+  padding: 10px;
+}
