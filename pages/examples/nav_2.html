@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sidebar Navigation Example</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    aside {
+      width: 240px;
+      background: #2d2d2d;
+      color: white;
+      padding: 1rem 0;
+    }
+
+    aside h2 {
+      font-size: 1.2rem;
+      margin: 0 1rem 1rem;
+    }
+
+    aside nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    aside nav li {
+      margin: 0;
+    }
+
+    aside nav a {
+      display: block;
+      padding: 0.9rem 1rem;
+      color: white;
+      text-decoration: none;
+    }
+
+    aside nav a:hover,
+    aside nav a:focus {
+      background: #444;
+      outline: none;
+    }
+
+    main {
+      flex: 1;
+      padding: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside>
+      <h2>Site Navigation</h2>
+      <nav aria-label="Sidebar navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Today's Menu</a></li>
+          <li><a href="activities.html">Activities</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="peer2peer.html">Peer2Peer</a></li>
+          <li><a href="thc_page.html">Town Hall</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main>
+      <h1>Page Title</h1>
+      <p>This is an example of a left sidebar navigation layout.</p>
+    </main>
+  </div>
+</body>
+</html>

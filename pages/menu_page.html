@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HKNC Today - Weekly Menu</title>
+    <link rel="stylesheet" href="../css/styles.css" />
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -13,7 +14,6 @@
       }
 
       header,
-      nav,
       main,
       footer {
         padding: 1rem;
@@ -21,15 +21,6 @@
 
       header {
         background: #f4f4f4;
-      }
-
-      nav ul {
-        list-style: none;
-        padding: 0;
-      }
-
-      nav li {
-        margin-bottom: 0.5rem;
       }
 
       main {
@@ -72,399 +63,402 @@
   </head>
 
   <body>
-    <header>
-      <h1>Weekly Menu</h1>
-      <p>Choose a day to view breakfast, lunch, and dinner options for the week.</p>
-    </header>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <nav aria-label="Page navigation">
-      <ul>
-        <li><a href="../index.html">Back to Home</a></li>
-      </ul>
-    </nav>
+    <div class="layout">
+      <div id="nav-container"></div>
 
-    <main>
-      <section aria-labelledby="day-selector-heading">
-        <h2 id="day-selector-heading">Select a Day</h2>
-        <label for="day-select">Choose a day of the week:</label>
-        <select id="day-select" aria-describedby="day-selector-help">
-          <option value="sunday">Sunday</option>
-          <option value="monday">Monday</option>
-          <option value="tuesday">Tuesday</option>
-          <option value="wednesday">Wednesday</option>
-          <option value="thursday">Thursday</option>
-          <option value="friday">Friday</option>
-          <option value="saturday">Saturday</option>
-        </select>
-        <p id="day-selector-help">Selecting a day will display that day's full menu below.</p>
-      </section>
+      <div class="content-area">
+        <header>
+          <h1>Weekly Menu</h1>
+          <p>Choose a day to view breakfast, lunch, and dinner options for the week.</p>
+        </header>
 
-      <section id="sunday" class="day-menu active" aria-labelledby="sunday-heading">
-        <h2 id="sunday-heading">Sunday</h2>
+        <main id="main-content">
+          <section aria-labelledby="day-selector-heading">
+            <h2 id="day-selector-heading">Select a Day</h2>
+            <label for="day-select">Choose a day of the week:</label>
+            <select id="day-select" aria-describedby="day-selector-help">
+              <option value="sunday">Sunday</option>
+              <option value="monday">Monday</option>
+              <option value="tuesday">Tuesday</option>
+              <option value="wednesday">Wednesday</option>
+              <option value="thursday">Thursday</option>
+              <option value="friday">Friday</option>
+              <option value="saturday">Saturday</option>
+            </select>
+            <p id="day-selector-help">Selecting a day will display that day's full menu below.</p>
+          </section>
 
-        <section aria-labelledby="sunday-breakfast-heading">
-          <h3 id="sunday-breakfast-heading">Breakfast</h3>
-          <ul>
-            <li>Option of 1-2 eggs any style, French toast, or pancakes</li>
-            <li>1 oz turkey, chicken, or pork sausage, or bacon</li>
-            <li>1 assorted fruit (1 whole or 1 cup cut fruit)</li>
-            <li>Always available: yogurt, toast, fresh fruit in season</li>
-          </ul>
-        </section>
+          <section id="sunday" class="day-menu active" aria-labelledby="sunday-heading">
+            <h2 id="sunday-heading">Sunday</h2>
 
-        <section aria-labelledby="sunday-lunch-heading">
-          <h3 id="sunday-lunch-heading">Lunch</h3>
-          <ul>
-            <li>2 oz cold cuts</li>
-            <li>1 hoagie roll</li>
-          </ul>
+            <section aria-labelledby="sunday-breakfast-heading">
+              <h3 id="sunday-breakfast-heading">Breakfast</h3>
+              <ul>
+                <li>Option of 1-2 eggs any style, French toast, or pancakes</li>
+                <li>1 oz turkey, chicken, or pork sausage, or bacon</li>
+                <li>1 assorted fruit (1 whole or 1 cup cut fruit)</li>
+                <li>Always available: yogurt, toast, fresh fruit in season</li>
+              </ul>
+            </section>
 
-          <details>
-            <summary>Choice of meats and cheese</summary>
-            <ul>
-              <li>Salami</li>
-              <li>Turkey</li>
-              <li>Pepperoni</li>
-              <li>Ham</li>
-              <li>Swiss</li>
-              <li>Provolone</li>
-            </ul>
-          </details>
+            <section aria-labelledby="sunday-lunch-heading">
+              <h3 id="sunday-lunch-heading">Lunch</h3>
+              <ul>
+                <li>2 oz cold cuts</li>
+                <li>1 hoagie roll</li>
+              </ul>
 
-          <details>
-            <summary>Choice of sides</summary>
-            <ul>
-              <li>1 cup pasta salad</li>
-              <li>2 cups green salad</li>
-            </ul>
-          </details>
+              <details>
+                <summary>Choice of meats and cheese</summary>
+                <ul>
+                  <li>Salami</li>
+                  <li>Turkey</li>
+                  <li>Pepperoni</li>
+                  <li>Ham</li>
+                  <li>Swiss</li>
+                  <li>Provolone</li>
+                </ul>
+              </details>
 
-          <p><strong>Alternate:</strong> Please inquire with cook</p>
-        </section>
+              <details>
+                <summary>Choice of sides</summary>
+                <ul>
+                  <li>1 cup pasta salad</li>
+                  <li>2 cups green salad</li>
+                </ul>
+              </details>
 
-        <section aria-labelledby="sunday-dinner-heading">
-          <h3 id="sunday-dinner-heading">Dinner</h3>
-          <ul>
-            <li>4 oz lasagna</li>
-            <li>1 Italian sausage</li>
-            <li>1/2 cup roasted broccoli</li>
-            <li>Dessert (optional): 3 oz bread pudding</li>
-          </ul>
-          <p><strong>Alternate:</strong> Please inquire with cook</p>
-        </section>
-      </section>
+              <p><strong>Alternate:</strong> Please inquire with cook</p>
+            </section>
 
-      <section id="monday" class="day-menu" aria-labelledby="monday-heading">
-        <h2 id="monday-heading">Monday</h2>
+            <section aria-labelledby="sunday-dinner-heading">
+              <h3 id="sunday-dinner-heading">Dinner</h3>
+              <ul>
+                <li>4 oz lasagna</li>
+                <li>1 Italian sausage</li>
+                <li>1/2 cup roasted broccoli</li>
+                <li>Dessert (optional): 3 oz bread pudding</li>
+              </ul>
+              <p><strong>Alternate:</strong> Please inquire with cook</p>
+            </section>
+          </section>
 
-        <section aria-labelledby="monday-breakfast-heading">
-          <h3 id="monday-breakfast-heading">Breakfast</h3>
-          <ul>
-            <li>Option of 1-2 eggs any style, French toast, or pancakes</li>
-            <li>1 oz turkey, chicken, or pork sausage, or bacon</li>
-            <li>1 assorted fruit (1 whole or 1 cup cut fruit)</li>
-            <li>Always available: yogurt, toast, fresh fruit in season</li>
-          </ul>
-        </section>
+          <section id="monday" class="day-menu" aria-labelledby="monday-heading">
+            <h2 id="monday-heading">Monday</h2>
 
-        <section aria-labelledby="monday-lunch-heading">
-          <h3 id="monday-lunch-heading">Lunch</h3>
-          <ul>
-            <li>3 oz chicken quesadilla</li>
-            <li>1 cup rice</li>
-            <li>1 cup tortilla chips</li>
-            <li>Sour cream</li>
-            <li>Cheddar cheese</li>
-            <li>Tomatoes</li>
-            <li>Onion</li>
-          </ul>
+            <section aria-labelledby="monday-breakfast-heading">
+              <h3 id="monday-breakfast-heading">Breakfast</h3>
+              <ul>
+                <li>Option of 1-2 eggs any style, French toast, or pancakes</li>
+                <li>1 oz turkey, chicken, or pork sausage, or bacon</li>
+                <li>1 assorted fruit (1 whole or 1 cup cut fruit)</li>
+                <li>Always available: yogurt, toast, fresh fruit in season</li>
+              </ul>
+            </section>
 
-          <details>
-            <summary>Choice of sides</summary>
-            <ul>
-              <li>1 cup tomato soup</li>
-              <li>1 cup black bean salad</li>
-            </ul>
-          </details>
+            <section aria-labelledby="monday-lunch-heading">
+              <h3 id="monday-lunch-heading">Lunch</h3>
+              <ul>
+                <li>3 oz chicken quesadilla</li>
+                <li>1 cup rice</li>
+                <li>1 cup tortilla chips</li>
+                <li>Sour cream</li>
+                <li>Cheddar cheese</li>
+                <li>Tomatoes</li>
+                <li>Onion</li>
+              </ul>
 
-          <p><strong>Alternate:</strong> Please inquire with cook</p>
-        </section>
+              <details>
+                <summary>Choice of sides</summary>
+                <ul>
+                  <li>1 cup tomato soup</li>
+                  <li>1 cup black bean salad</li>
+                </ul>
+              </details>
 
-        <section aria-labelledby="monday-dinner-heading">
-          <h3 id="monday-dinner-heading">Dinner</h3>
-          <ul>
-            <li>3 oz grilled steak</li>
-            <li>1 cup roasted sweet potato</li>
-            <li>1/2 cup squash</li>
-            <li>Dessert (optional): 3 oz fresh baked cookies</li>
-          </ul>
-          <p><strong>Alternate:</strong> Please inquire with cook</p>
-        </section>
-      </section>
+              <p><strong>Alternate:</strong> Please inquire with cook</p>
+            </section>
 
-      <section id="tuesday" class="day-menu" aria-labelledby="tuesday-heading">
-        <h2 id="tuesday-heading">Tuesday</h2>
+            <section aria-labelledby="monday-dinner-heading">
+              <h3 id="monday-dinner-heading">Dinner</h3>
+              <ul>
+                <li>3 oz grilled steak</li>
+                <li>1 cup roasted sweet potato</li>
+                <li>1/2 cup squash</li>
+                <li>Dessert (optional): 3 oz fresh baked cookies</li>
+              </ul>
+              <p><strong>Alternate:</strong> Please inquire with cook</p>
+            </section>
+          </section>
 
-        <section aria-labelledby="tuesday-breakfast-heading">
-          <h3 id="tuesday-breakfast-heading">Breakfast</h3>
-          <ul>
-            <li>Option of 1-2 eggs any style, French toast, or pancakes</li>
-            <li>1 oz turkey, chicken, or pork sausage, or bacon</li>
-            <li>1 assorted fruit (1 whole or 1 cup cut fruit)</li>
-            <li>Always available: yogurt, toast, fresh fruit in season</li>
-          </ul>
-        </section>
+          <section id="tuesday" class="day-menu" aria-labelledby="tuesday-heading">
+            <h2 id="tuesday-heading">Tuesday</h2>
 
-        <section aria-labelledby="tuesday-lunch-heading">
-          <h3 id="tuesday-lunch-heading">Lunch</h3>
-          <ul>
-            <li>3 oz BBQ brisket</li>
-            <li>1 cup corn bread</li>
-            <li>1 cup coleslaw</li>
-          </ul>
+            <section aria-labelledby="tuesday-breakfast-heading">
+              <h3 id="tuesday-breakfast-heading">Breakfast</h3>
+              <ul>
+                <li>Option of 1-2 eggs any style, French toast, or pancakes</li>
+                <li>1 oz turkey, chicken, or pork sausage, or bacon</li>
+                <li>1 assorted fruit (1 whole or 1 cup cut fruit)</li>
+                <li>Always available: yogurt, toast, fresh fruit in season</li>
+              </ul>
+            </section>
 
-          <details>
-            <summary>Choice of sides</summary>
-            <ul>
-              <li>2 cups green salad</li>
-              <li>1 cup pasta salad</li>
-            </ul>
-          </details>
+            <section aria-labelledby="tuesday-lunch-heading">
+              <h3 id="tuesday-lunch-heading">Lunch</h3>
+              <ul>
+                <li>3 oz BBQ brisket</li>
+                <li>1 cup corn bread</li>
+                <li>1 cup coleslaw</li>
+              </ul>
 
-          <p><strong>Alternate:</strong> Please inquire with cook</p>
-        </section>
+              <details>
+                <summary>Choice of sides</summary>
+                <ul>
+                  <li>2 cups green salad</li>
+                  <li>1 cup pasta salad</li>
+                </ul>
+              </details>
 
-        <section aria-labelledby="tuesday-dinner-heading">
-          <h3 id="tuesday-dinner-heading">Dinner</h3>
-          <ul>
-            <li>3 oz fried pork cutlets</li>
-            <li>1 cup roasted potatoes</li>
-            <li>1/2 cup green beans</li>
-            <li>Dessert (optional): 3 oz strawberry shortcake</li>
-          </ul>
-          <p><strong>Alternate:</strong> Please inquire with cook</p>
-        </section>
-      </section>
+              <p><strong>Alternate:</strong> Please inquire with cook</p>
+            </section>
 
-      <section id="wednesday" class="day-menu" aria-labelledby="wednesday-heading">
-        <h2 id="wednesday-heading">Wednesday</h2>
+            <section aria-labelledby="tuesday-dinner-heading">
+              <h3 id="tuesday-dinner-heading">Dinner</h3>
+              <ul>
+                <li>3 oz fried pork cutlets</li>
+                <li>1 cup roasted potatoes</li>
+                <li>1/2 cup green beans</li>
+                <li>Dessert (optional): 3 oz strawberry shortcake</li>
+              </ul>
+              <p><strong>Alternate:</strong> Please inquire with cook</p>
+            </section>
+          </section>
 
-        <section aria-labelledby="wednesday-breakfast-heading">
-          <h3 id="wednesday-breakfast-heading">Breakfast</h3>
-          <ul>
-            <li>Option of 1-2 eggs any style, French toast, or pancakes</li>
-            <li>1 oz turkey, chicken, or pork sausage, or bacon</li>
-            <li>1 assorted fruit (1 whole or 1 cup cut fruit)</li>
-            <li>Always available: yogurt, toast, fresh fruit in season</li>
-          </ul>
-        </section>
+          <section id="wednesday" class="day-menu" aria-labelledby="wednesday-heading">
+            <h2 id="wednesday-heading">Wednesday</h2>
 
-        <section aria-labelledby="wednesday-lunch-heading">
-          <h3 id="wednesday-lunch-heading">Lunch</h3>
-          <ul>
-            <li>4 oz hamburgers on a bun</li>
-          </ul>
+            <section aria-labelledby="wednesday-breakfast-heading">
+              <h3 id="wednesday-breakfast-heading">Breakfast</h3>
+              <ul>
+                <li>Option of 1-2 eggs any style, French toast, or pancakes</li>
+                <li>1 oz turkey, chicken, or pork sausage, or bacon</li>
+                <li>1 assorted fruit (1 whole or 1 cup cut fruit)</li>
+                <li>Always available: yogurt, toast, fresh fruit in season</li>
+              </ul>
+            </section>
 
-          <details>
-            <summary>Toppings</summary>
-            <ul>
-              <li>Bacon</li>
-              <li>Lettuce</li>
-              <li>Tomato</li>
-              <li>Cheese</li>
-              <li>Pickles</li>
-              <li>Onion</li>
-            </ul>
-          </details>
+            <section aria-labelledby="wednesday-lunch-heading">
+              <h3 id="wednesday-lunch-heading">Lunch</h3>
+              <ul>
+                <li>4 oz hamburgers on a bun</li>
+              </ul>
 
-          <details>
-            <summary>Choice of sides</summary>
-            <ul>
-              <li>2 cups Caesar salad</li>
-              <li>2 cups green salad</li>
-            </ul>
-          </details>
+              <details>
+                <summary>Toppings</summary>
+                <ul>
+                  <li>Bacon</li>
+                  <li>Lettuce</li>
+                  <li>Tomato</li>
+                  <li>Cheese</li>
+                  <li>Pickles</li>
+                  <li>Onion</li>
+                </ul>
+              </details>
 
-          <p><strong>Alternate:</strong> Please inquire with cook</p>
-        </section>
+              <details>
+                <summary>Choice of sides</summary>
+                <ul>
+                  <li>2 cups Caesar salad</li>
+                  <li>2 cups green salad</li>
+                </ul>
+              </details>
 
-        <section aria-labelledby="wednesday-dinner-heading">
-          <h3 id="wednesday-dinner-heading">Dinner</h3>
-          <ul>
-            <li>3 oz fish tacos</li>
-            <li>1 flour tortilla</li>
-            <li>1/2 cup pico de gallo</li>
-            <li>1 cup seasoned rice</li>
-            <li>1/4 cup coleslaw</li>
-            <li>Dessert (optional): 3 oz chocolate brownie</li>
-          </ul>
-          <p><strong>Alternate:</strong> Please inquire with cook</p>
-        </section>
-      </section>
+              <p><strong>Alternate:</strong> Please inquire with cook</p>
+            </section>
 
-      <section id="thursday" class="day-menu" aria-labelledby="thursday-heading">
-        <h2 id="thursday-heading">Thursday</h2>
+            <section aria-labelledby="wednesday-dinner-heading">
+              <h3 id="wednesday-dinner-heading">Dinner</h3>
+              <ul>
+                <li>3 oz fish tacos</li>
+                <li>1 flour tortilla</li>
+                <li>1/2 cup pico de gallo</li>
+                <li>1 cup seasoned rice</li>
+                <li>1/4 cup coleslaw</li>
+                <li>Dessert (optional): 3 oz chocolate brownie</li>
+              </ul>
+              <p><strong>Alternate:</strong> Please inquire with cook</p>
+            </section>
+          </section>
 
-        <section aria-labelledby="thursday-breakfast-heading">
-          <h3 id="thursday-breakfast-heading">Breakfast</h3>
-          <ul>
-            <li>Option of 1-2 eggs any style, French toast, or pancakes</li>
-            <li>1 oz turkey, chicken, or pork sausage, or bacon</li>
-            <li>1 assorted fruit (1 whole or 1 cup cut fruit)</li>
-            <li>Always available: yogurt, toast, fresh fruit in season</li>
-          </ul>
-        </section>
+          <section id="thursday" class="day-menu" aria-labelledby="thursday-heading">
+            <h2 id="thursday-heading">Thursday</h2>
 
-        <section aria-labelledby="thursday-lunch-heading">
-          <h3 id="thursday-lunch-heading">Lunch</h3>
-          <ul>
-            <li>4 oz chicken wings</li>
-          </ul>
+            <section aria-labelledby="thursday-breakfast-heading">
+              <h3 id="thursday-breakfast-heading">Breakfast</h3>
+              <ul>
+                <li>Option of 1-2 eggs any style, French toast, or pancakes</li>
+                <li>1 oz turkey, chicken, or pork sausage, or bacon</li>
+                <li>1 assorted fruit (1 whole or 1 cup cut fruit)</li>
+                <li>Always available: yogurt, toast, fresh fruit in season</li>
+              </ul>
+            </section>
 
-          <details>
-            <summary>Wing flavors</summary>
-            <ul>
-              <li>BBQ</li>
-              <li>Buffalo</li>
-              <li>Garlic Parm</li>
-            </ul>
-          </details>
+            <section aria-labelledby="thursday-lunch-heading">
+              <h3 id="thursday-lunch-heading">Lunch</h3>
+              <ul>
+                <li>4 oz chicken wings</li>
+              </ul>
 
-          <ul>
-            <li>1 cup waffle fries</li>
-          </ul>
+              <details>
+                <summary>Wing flavors</summary>
+                <ul>
+                  <li>BBQ</li>
+                  <li>Buffalo</li>
+                  <li>Garlic Parm</li>
+                </ul>
+              </details>
 
-          <details>
-            <summary>Choice of sides</summary>
-            <ul>
-              <li>1 cup coleslaw</li>
-              <li>2 cups green salad</li>
-            </ul>
-          </details>
+              <ul>
+                <li>1 cup waffle fries</li>
+              </ul>
 
-          <p><strong>Alternate:</strong> Please inquire with cook</p>
-        </section>
+              <details>
+                <summary>Choice of sides</summary>
+                <ul>
+                  <li>1 cup coleslaw</li>
+                  <li>2 cups green salad</li>
+                </ul>
+              </details>
 
-        <section aria-labelledby="thursday-dinner-heading">
-          <h3 id="thursday-dinner-heading">Dinner</h3>
-          <ul>
-            <li>3 oz chicken marsala</li>
-            <li>1 cup garlic mashed potatoes</li>
-            <li>1/2 cup green beans</li>
-            <li>Dessert (optional): 3 oz Jell-O</li>
-          </ul>
-          <p><strong>Alternate:</strong> Please inquire with cook</p>
-        </section>
-      </section>
+              <p><strong>Alternate:</strong> Please inquire with cook</p>
+            </section>
 
-      <section id="friday" class="day-menu" aria-labelledby="friday-heading">
-        <h2 id="friday-heading">Friday</h2>
+            <section aria-labelledby="thursday-dinner-heading">
+              <h3 id="thursday-dinner-heading">Dinner</h3>
+              <ul>
+                <li>3 oz chicken marsala</li>
+                <li>1 cup garlic mashed potatoes</li>
+                <li>1/2 cup green beans</li>
+                <li>Dessert (optional): 3 oz Jell-O</li>
+              </ul>
+              <p><strong>Alternate:</strong> Please inquire with cook</p>
+            </section>
+          </section>
 
-        <section aria-labelledby="friday-breakfast-heading">
-          <h3 id="friday-breakfast-heading">Breakfast</h3>
-          <ul>
-            <li>Option of 1-2 eggs any style, French toast, or pancakes</li>
-            <li>1 oz turkey, chicken, or pork sausage, or bacon</li>
-            <li>1 assorted fruit (1 whole or 1 cup cut fruit)</li>
-            <li>Always available: yogurt, toast, fresh fruit in season</li>
-          </ul>
-        </section>
+          <section id="friday" class="day-menu" aria-labelledby="friday-heading">
+            <h2 id="friday-heading">Friday</h2>
 
-        <section aria-labelledby="friday-lunch-heading">
-          <h3 id="friday-lunch-heading">Lunch</h3>
-          <ul>
-            <li>3 oz Philly cheese steak</li>
-            <li>1 hoagie</li>
-            <li>1/4 cup peppers and onions</li>
-            <li>1 cup steak fries</li>
-          </ul>
+            <section aria-labelledby="friday-breakfast-heading">
+              <h3 id="friday-breakfast-heading">Breakfast</h3>
+              <ul>
+                <li>Option of 1-2 eggs any style, French toast, or pancakes</li>
+                <li>1 oz turkey, chicken, or pork sausage, or bacon</li>
+                <li>1 assorted fruit (1 whole or 1 cup cut fruit)</li>
+                <li>Always available: yogurt, toast, fresh fruit in season</li>
+              </ul>
+            </section>
 
-          <details>
-            <summary>Choice of sides</summary>
-            <ul>
-              <li>2 cups green salad</li>
-            </ul>
-          </details>
+            <section aria-labelledby="friday-lunch-heading">
+              <h3 id="friday-lunch-heading">Lunch</h3>
+              <ul>
+                <li>3 oz Philly cheese steak</li>
+                <li>1 hoagie</li>
+                <li>1/4 cup peppers and onions</li>
+                <li>1 cup steak fries</li>
+              </ul>
 
-          <p><strong>Alternate:</strong> Please inquire with cook</p>
-        </section>
+              <details>
+                <summary>Choice of sides</summary>
+                <ul>
+                  <li>2 cups green salad</li>
+                </ul>
+              </details>
 
-        <section aria-labelledby="friday-dinner-heading">
-          <h3 id="friday-dinner-heading">Dinner</h3>
-          <ul>
-            <li>3 oz shrimp scampi</li>
-            <li>1 cup brown rice</li>
-            <li>1/2 cup roasted asparagus</li>
-            <li>Dessert (optional): 3 oz vanilla cake</li>
-          </ul>
-          <p><strong>Alternate:</strong> Please inquire with cook</p>
-        </section>
-      </section>
+              <p><strong>Alternate:</strong> Please inquire with cook</p>
+            </section>
 
-      <section id="saturday" class="day-menu" aria-labelledby="saturday-heading">
-        <h2 id="saturday-heading">Saturday</h2>
+            <section aria-labelledby="friday-dinner-heading">
+              <h3 id="friday-dinner-heading">Dinner</h3>
+              <ul>
+                <li>3 oz shrimp scampi</li>
+                <li>1 cup brown rice</li>
+                <li>1/2 cup roasted asparagus</li>
+                <li>Dessert (optional): 3 oz vanilla cake</li>
+              </ul>
+              <p><strong>Alternate:</strong> Please inquire with cook</p>
+            </section>
+          </section>
 
-        <section aria-labelledby="saturday-breakfast-heading">
-          <h3 id="saturday-breakfast-heading">Breakfast</h3>
-          <ul>
-            <li>Option of 1-2 eggs any style, French toast, or pancakes</li>
-            <li>1 oz turkey, chicken, or pork sausage, or bacon</li>
-            <li>1 assorted fruit (1 whole or 1 cup cut fruit)</li>
-            <li>Always available: yogurt, toast, fresh fruit in season</li>
-          </ul>
-        </section>
+          <section id="saturday" class="day-menu" aria-labelledby="saturday-heading">
+            <h2 id="saturday-heading">Saturday</h2>
 
-        <section aria-labelledby="saturday-lunch-heading">
-          <h3 id="saturday-lunch-heading">Lunch</h3>
-          <ul>
-            <li>Rustic pizza</li>
-          </ul>
+            <section aria-labelledby="saturday-breakfast-heading">
+              <h3 id="saturday-breakfast-heading">Breakfast</h3>
+              <ul>
+                <li>Option of 1-2 eggs any style, French toast, or pancakes</li>
+                <li>1 oz turkey, chicken, or pork sausage, or bacon</li>
+                <li>1 assorted fruit (1 whole or 1 cup cut fruit)</li>
+                <li>Always available: yogurt, toast, fresh fruit in season</li>
+              </ul>
+            </section>
 
-          <details>
-            <summary>Optional toppings</summary>
-            <ul>
-              <li>1/4 cup peppers</li>
-              <li>Pepperoni</li>
-              <li>Onions</li>
-            </ul>
-          </details>
+            <section aria-labelledby="saturday-lunch-heading">
+              <h3 id="saturday-lunch-heading">Lunch</h3>
+              <ul>
+                <li>Rustic pizza</li>
+              </ul>
 
-          <details>
-            <summary>Choice of sides</summary>
-            <ul>
-              <li>1 cup Caesar salad</li>
-              <li>2 cups green salad</li>
-            </ul>
-          </details>
+              <details>
+                <summary>Optional toppings</summary>
+                <ul>
+                  <li>1/4 cup peppers</li>
+                  <li>Pepperoni</li>
+                  <li>Onions</li>
+                </ul>
+              </details>
 
-          <p><strong>Alternate:</strong> Please inquire with cook</p>
-        </section>
+              <details>
+                <summary>Choice of sides</summary>
+                <ul>
+                  <li>1 cup Caesar salad</li>
+                  <li>2 cups green salad</li>
+                </ul>
+              </details>
 
-        <section aria-labelledby="saturday-dinner-heading">
-          <h3 id="saturday-dinner-heading">Dinner</h3>
-          <ul>
-            <li>3 oz turkey meatloaf</li>
-            <li>1 cup roasted red potatoes</li>
-            <li>1 cup Key Largo vegetables</li>
-            <li>Dessert (optional): 3 oz pineapple chunks</li>
-          </ul>
-          <p><strong>Alternate:</strong> Please inquire with cook</p>
-        </section>
-      </section>
+              <p><strong>Alternate:</strong> Please inquire with cook</p>
+            </section>
 
-      <section class="notes" aria-labelledby="notes-heading">
-        <h3 id="notes-heading">Notes</h3>
-        <p>This menu is subject to change. Please keep this in mind when viewing the menu.</p>
-        <p>
-          Drinks available at all meals: grape juice, orange juice, cranberry juice,
-          apple juice, coffee, tea, and iced tea.
-        </p>
-        <p>
-          Available fruits at all meals: apples, oranges, pears, strawberries, and blueberries.
-        </p>
-      </section>
-    </main>
+            <section aria-labelledby="saturday-dinner-heading">
+              <h3 id="saturday-dinner-heading">Dinner</h3>
+              <ul>
+                <li>3 oz turkey meatloaf</li>
+                <li>1 cup roasted red potatoes</li>
+                <li>1 cup Key Largo vegetables</li>
+                <li>Dessert (optional): 3 oz pineapple chunks</li>
+              </ul>
+              <p><strong>Alternate:</strong> Please inquire with cook</p>
+            </section>
+          </section>
 
+          <section class="notes" aria-labelledby="notes-heading">
+            <h3 id="notes-heading">Notes</h3>
+            <p>This menu is subject to change. Please keep this in mind when viewing the menu.</p>
+            <p>
+              Drinks available at all meals: grape juice, orange juice, cranberry juice,
+              apple juice, coffee, tea, and iced tea.
+            </p>
+            <p>
+              Available fruits at all meals: apples, oranges, pears, strawberries, and blueberries.
+            </p>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script src="../js/nav.js"></script>
     <script>
       const daySelect = document.getElementById("day-select");
       const dayMenus = document.querySelectorAll(".day-menu");

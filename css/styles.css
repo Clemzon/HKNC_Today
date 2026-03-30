@@ -1,36 +1,122 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
-  background-color: white;
-  color: navy;
+  margin: 0;
   font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #111111;
+  background: #ffffff;
 }
 
-h1 {
-  color: red;
-  text-align: center;
+.skip-link {
+  position: absolute;
+  top: -48px;
+  left: 1rem;
+  background: #000000;
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  z-index: 1000;
 }
 
-h2 {
-  color: blue;
+.skip-link:focus {
+  top: 1rem;
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
 }
 
-p {
-  color: navy;
+.layout {
+  display: flex;
+  min-height: 100vh;
 }
 
-ul {
-  color: red;
+#nav-container {
+  flex: 0 0 220px;
 }
 
-a {
-  color: blue;
+.content-area {
+  flex: 1;
+  min-width: 0;
+  padding: 1.5rem;
 }
 
-a:hover {
-  color: red;
+header,
+main,
+footer {
+  max-width: 900px;
 }
 
-div {
-  border: 2px solid red;
-  background-color: #f0f8ff;
-  padding: 10px;
+header {
+  margin-bottom: 2rem;
+}
+
+main section {
+  margin-bottom: 2rem;
+}
+
+footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #d6d6d6;
+}
+
+.site-side-nav-wrapper {
+  width: 100%;
+  max-width: 220px;
+  min-height: 100vh;
+  padding: 1rem;
+  border-right: 1px solid #d6d6d6;
+  background: #f4f4f4;
+  position: sticky;
+  top: 0;
+}
+
+.site-side-nav {
+  width: 100%;
+}
+
+.site-side-nav-title {
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+}
+
+.site-side-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-side-nav-list li {
+  margin: 0 0 0.5rem 0;
+}
+
+.site-side-nav-list a {
+  display: block;
+  padding: 0.65rem 0.8rem;
+  text-decoration: none;
+  color: #111111;
+  border-radius: 0.35rem;
+}
+
+.site-side-nav-list a:hover,
+.site-side-nav-list a:focus {
+  background: #e7e7e7;
+}
+
+.site-side-nav-list a:focus {
+  outline: 3px solid #000000;
+  outline-offset: 2px;
+}
+
+.site-side-nav-list a[aria-current="page"] {
+  font-weight: bold;
+  background: #dddddd;
 }

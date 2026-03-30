@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Top Navigation Example</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background: #1f1f1f;
+      color: white;
+      padding: 1rem;
+    }
+
+    nav {
+      background: #2d2d2d;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    nav li {
+      margin: 0;
+    }
+
+    nav a {
+      display: block;
+      padding: 1rem 1.25rem;
+      color: white;
+      text-decoration: none;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      background: #444;
+      outline: none;
+    }
+
+    main {
+      padding: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Website</h1>
+  </header>
+
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Today's Menu</a></li>
+      <li><a href="activities.html">Activities</a></li>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="peer2peer.html">Peer2Peer</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>Welcome</h2>
+    <p>This is an example of a top navigation bar.</p>
+  </main>
+</body>
+</html>
