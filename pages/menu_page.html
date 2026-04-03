@@ -24,56 +24,21 @@
       }
 
       .page-intro,
-      .menu-actions,
       .menu-controls,
       .weekly-menu-section,
-      .monthly-menu-section,
       .menu-notes-section,
       .staff-update-section {
         margin-bottom: 2rem;
       }
 
       .page-intro,
-      .menu-actions,
       .menu-controls,
-      .monthly-menu-section,
       .menu-notes-section,
       .staff-update-section {
         border: 1px solid #d6d6d6;
         border-radius: 12px;
         padding: 1rem;
         background: #ffffff;
-      }
-
-      .menu-actions-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.75rem;
-        margin-top: 1rem;
-      }
-
-      .menu-button {
-        display: inline-block;
-        padding: 0.8rem 1rem;
-        border-radius: 10px;
-        border: 1px solid #1f4d8f;
-        text-decoration: none;
-        font-weight: 600;
-      }
-
-      .menu-button:focus,
-      .menu-button:hover {
-        outline: 2px solid transparent;
-      }
-
-      .menu-button.primary {
-        background: #1f4d8f;
-        color: #ffffff;
-      }
-
-      .menu-button.secondary {
-        background: #ffffff;
-        color: #1f4d8f;
       }
 
       .status-message {
@@ -113,10 +78,6 @@
         margin-top: 0;
       }
 
-      .day-card p {
-        margin-bottom: 0.75rem;
-      }
-
       .meal-block {
         margin-bottom: 1rem;
       }
@@ -126,19 +87,11 @@
       }
 
       .meal-block p {
-        margin-top: 0;
+        margin: 0;
       }
 
       .day-card.hidden {
         display: none;
-      }
-
-      .monthly-menu-links {
-        margin-top: 1rem;
-      }
-
-      .monthly-menu-links ul {
-        padding-left: 1.2rem;
       }
 
       .help-text {
@@ -148,19 +101,6 @@
       .small-note {
         font-size: 0.95rem;
         color: #444;
-      }
-
-      @media (max-width: 768px) {
-        .menu-actions-list {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-
-        .menu-button {
-          width: 100%;
-          max-width: 320px;
-          box-sizing: border-box;
-        }
       }
     </style>
   </head>
@@ -175,7 +115,8 @@
         <header>
           <h1>Campus Menu</h1>
           <p>
-            View the current weekly menu and access the full monthly menu document.
+            View the current weekly menu and choose a day to focus on a single
+            menu at a time.
           </p>
         </header>
 
@@ -183,58 +124,32 @@
           <section class="page-intro" aria-labelledby="menu-overview-heading">
             <h2 id="menu-overview-heading">Menu Overview</h2>
             <p>
-              This page is now organized in two simple parts. The weekly menu is
-              meant to give students a clean, easy-to-read view of the current
-              week. The monthly menu section provides access to the full official
-              menu document from Microsoft OneDrive.
+              This page is designed to support the new weekly menu system. Staff
+              can maintain the weekly menu through Microsoft services, while
+              students can use this page to review the full week or focus on a
+              single day.
             </p>
             <p>
-              The menu may change based on campus operations, product availability,
-              or kitchen updates. When in doubt, check the monthly menu document or
-              ask dining staff for the most current information.
-            </p>
-          </section>
-
-          <section class="menu-actions" aria-labelledby="quick-access-heading">
-            <h2 id="quick-access-heading">Quick Access</h2>
-            <p>
-              Use these options to open or download the full monthly menu document.
+              A separate daily publishing system may be added later. For now,
+              the daily view on this page comes from the weekly menu display.
             </p>
 
-            <div class="menu-actions-list">
-              <a
-                class="menu-button primary"
-                href="https://1drv.ms/w/c/83661F48B2EB281F/IQCyBlEpNb_QQKkAJkPzR4_IAVtfX9jtjNKwZZrvkOOUgKQ?e=wuwBEn"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Open Monthly Menu
-              </a>
-
-              <a
-                class="menu-button secondary"
-                href="https://1drv.ms/w/c/83661F48B2EB281F/IQCyBlEpNb_QQKkAJkPzR4_IAVtfX9jtjNKwZZrvkOOUgKQ?e=wuwBEn"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Download Monthly Menu
-              </a>
-            </div>
-
-            <div class="status-message" aria-label="Menu update notice">
+            <div class="status-message" aria-label="Menu status">
               <p>
-                <strong>Current setup:</strong> The monthly menu document is hosted
-                through Microsoft OneDrive, and the weekly menu section below is
-                organized so it can match the published weekly menu system.
+                <strong>Current setup:</strong> The weekly menu structure is in
+                progress and is being prepared for the Microsoft List workflow.
               </p>
             </div>
           </section>
 
-          <section class="menu-controls" aria-labelledby="weekly-menu-controls-heading">
+          <section
+            class="menu-controls"
+            aria-labelledby="weekly-menu-controls-heading"
+          >
             <h2 id="weekly-menu-controls-heading">Weekly Menu Viewer</h2>
             <p id="menu-viewer-help" class="help-text">
-              Choose a day to focus on one menu at a time, or select “Show Full Week”
-              to read all days together.
+              Choose a day to view one day at a time, or select
+              <strong>Show Full Week</strong> to read all days together.
             </p>
 
             <label for="day-select">Choose a day:</label>
@@ -250,12 +165,15 @@
             </select>
           </section>
 
-          <section class="weekly-menu-section" aria-labelledby="weekly-menu-heading">
+          <section
+            class="weekly-menu-section"
+            aria-labelledby="weekly-menu-heading"
+          >
             <h2 id="weekly-menu-heading">This Week’s Menu</h2>
             <p class="small-note">
-              The layout below is set up for the weekly published menu. Replace the
-              sample text with the current week’s meals as needed while the Microsoft
-              publishing workflow is being finalized.
+              The sections below are placeholders for the weekly menu display.
+              Replace this text with the current published weekly menu as the
+              Microsoft workflow is completed.
             </p>
 
             <div class="week-grid">
@@ -331,7 +249,11 @@
                 </div>
               </article>
 
-              <article class="day-card" id="wednesday" aria-labelledby="wednesday-heading">
+              <article
+                class="day-card"
+                id="wednesday"
+                aria-labelledby="wednesday-heading"
+              >
                 <h3 id="wednesday-heading">Wednesday</h3>
 
                 <div class="meal-block">
@@ -355,7 +277,11 @@
                 </div>
               </article>
 
-              <article class="day-card" id="thursday" aria-labelledby="thursday-heading">
+              <article
+                class="day-card"
+                id="thursday"
+                aria-labelledby="thursday-heading"
+              >
                 <h3 id="thursday-heading">Thursday</h3>
 
                 <div class="meal-block">
@@ -403,7 +329,11 @@
                 </div>
               </article>
 
-              <article class="day-card" id="saturday" aria-labelledby="saturday-heading">
+              <article
+                class="day-card"
+                id="saturday"
+                aria-labelledby="saturday-heading"
+              >
                 <h3 id="saturday-heading">Saturday</h3>
 
                 <div class="meal-block">
@@ -429,44 +359,10 @@
             </div>
           </section>
 
-          <section class="monthly-menu-section" aria-labelledby="monthly-menu-heading">
-            <h2 id="monthly-menu-heading">Full Monthly Menu</h2>
-            <p>
-              The full monthly menu is available through Microsoft OneDrive. Use the
-              links below to open the menu in your browser or access the file for
-              download.
-            </p>
-
-            <div class="monthly-menu-links">
-              <ul>
-                <li>
-                  <a
-                    href="https://1drv.ms/w/c/83661F48B2EB281F/IQCyBlEpNb_QQKkAJkPzR4_IAVtfX9jtjNKwZZrvkOOUgKQ?e=wuwBEn"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Open the full monthly menu document
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://1drv.ms/w/c/83661F48B2EB281F/IQCyBlEpNb_QQKkAJkPzR4_IAVtfX9jtjNKwZZrvkOOUgKQ?e=wuwBEn"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Download or save the monthly menu
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <p class="small-note">
-              If the download does not begin automatically, open the document first
-              and use the download option inside the Microsoft viewer.
-            </p>
-          </section>
-
-          <section class="menu-notes-section" aria-labelledby="menu-notes-heading">
+          <section
+            class="menu-notes-section"
+            aria-labelledby="menu-notes-heading"
+          >
             <h2 id="menu-notes-heading">Important Notes</h2>
             <p>
               Menu items are subject to change. Please check back regularly for
@@ -474,24 +370,28 @@
             </p>
             <p>
               If a meal listed on this page does not match what is being served,
-              please follow the dining hall’s posted information or ask staff for the
-              latest update.
+              please follow the dining hall’s posted information or ask staff for
+              the latest update.
             </p>
           </section>
 
-          <section class="staff-update-section" aria-labelledby="staff-update-heading">
+          <section
+            class="staff-update-section"
+            aria-labelledby="staff-update-heading"
+          >
             <h2 id="staff-update-heading">Staff Update Process</h2>
             <p>
-              Staff should continue using the Microsoft workflow for menu publishing:
+              Staff should continue using the Microsoft weekly workflow for menu
+              publishing.
             </p>
             <ol>
-              <li>Upload or replace the current menu document in OneDrive.</li>
               <li>Update the Weekly Menu list in Microsoft Lists.</li>
-              <li>Confirm the published weekly information matches the official file.</li>
+              <li>Confirm the published weekly information is correct.</li>
+              <li>Check the website display for accuracy.</li>
             </ol>
             <p class="small-note">
-              This page is now structured to support that process without requiring
-              staff to edit large amounts of HTML content.
+              This page is now structured to support the weekly menu process
+              without requiring large manual HTML edits each time.
             </p>
           </section>
         </main>

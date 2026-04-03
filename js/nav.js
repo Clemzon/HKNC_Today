@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     navContainer.innerHTML = navMarkup;
 
     setActiveNavLink();
+    initializeNavigation();
   } catch (error) {
     console.error("Error loading navigation:", error);
     navContainer.innerHTML = `
@@ -39,4 +40,86 @@ function setActiveNavLink() {
       link.setAttribute("aria-current", "page");
     }
   });
+}
+
+function initializeNavigation() {
+  const navWrapper = document.querySelector(".site-side-nav-wrapper");
+  const nav = document.getElementById("site-main-navigation");
+  const toggleButton = document.querySelector(".site-nav-toggle");
+  const overlay = document.querySelector(".site-nav-overlay");
+  const navLinks = document.querySelectorAll("#site-main-navigation a");
+  const mobileMedia = window.matchMedia("(max-width: 767px)");
+
+  if (!navWrapper || !nav || !toggleButton || !overlay) {
+    return;
+  }
+
+  function isMobileView() {
+    return mobileMedia.matches;
+  }
+
+  function openMobileNav() {
+    navWrapper.classList.add("nav-open");
+    toggleButton.setAttribute("aria-expanded", "true");
+    overlay.hidden = false;
+    document.body.classList.add("nav-menu-open");
+  }
+
+  function closeMobileNav() {
+    navWrapper.classList.remove("nav-open");
+    toggleButton.setAttribute("aria-expanded", "false");
+    overlay.hidden = true;
+    document.body.classList.remove("nav-menu-open");
+  }
+
+  function syncNavigationState() {
+    if (isMobileView()) {
+      closeMobileNav();
+    } else {
+      navWrapper.classList.remove("nav-open");
+      toggleButton.setAttribute("aria-expanded", "false");
+      overlay.hidden = true;
+      document.body.classList.remove("nav-menu-open");
+    }
+  }
+
+  toggleButton.addEventListener("click", () => {
+    if (!isMobileView()) {
+      return;
+    }
+
+    const isOpen = navWrapper.classList.contains("nav-open");
+
+    if (isOpen) {
+      closeMobileNav();
+    } else {
+      openMobileNav();
+    }
+  });
+
+  overlay.addEventListener("click", () => {
+    closeMobileNav();
+  });
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (isMobileView()) {
+        closeMobileNav();
+      }
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && isMobileView()) {
+      closeMobileNav();
+    }
+  });
+
+  if (typeof mobileMedia.addEventListener === "function") {
+    mobileMedia.addEventListener("change", syncNavigationState);
+  } else {
+    window.addEventListener("resize", syncNavigationState);
+  }
+
+  syncNavigationState();
 }
