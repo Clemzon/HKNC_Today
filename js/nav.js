@@ -45,12 +45,12 @@ function setActiveNavLink() {
 function initializeNavigation() {
   const navWrapper = document.querySelector(".site-side-nav-wrapper");
   const nav = document.getElementById("site-main-navigation");
-  const toggleButton = document.querySelector(".site-nav-toggle");
   const overlay = document.querySelector(".site-nav-overlay");
+  const toggleButton = document.querySelector(".site-menu-toggle");
   const navLinks = document.querySelectorAll("#site-main-navigation a");
   const mobileMedia = window.matchMedia("(max-width: 767px)");
 
-  if (!navWrapper || !nav || !toggleButton || !overlay) {
+  if (!navWrapper || !nav || !overlay || !toggleButton) {
     return;
   }
 
@@ -60,15 +60,15 @@ function initializeNavigation() {
 
   function openMobileNav() {
     navWrapper.classList.add("nav-open");
-    toggleButton.setAttribute("aria-expanded", "true");
     overlay.hidden = false;
+    toggleButton.setAttribute("aria-expanded", "true");
     document.body.classList.add("nav-menu-open");
   }
 
   function closeMobileNav() {
     navWrapper.classList.remove("nav-open");
-    toggleButton.setAttribute("aria-expanded", "false");
     overlay.hidden = true;
+    toggleButton.setAttribute("aria-expanded", "false");
     document.body.classList.remove("nav-menu-open");
   }
 
@@ -77,8 +77,8 @@ function initializeNavigation() {
       closeMobileNav();
     } else {
       navWrapper.classList.remove("nav-open");
-      toggleButton.setAttribute("aria-expanded", "false");
       overlay.hidden = true;
+      toggleButton.setAttribute("aria-expanded", "false");
       document.body.classList.remove("nav-menu-open");
     }
   }
