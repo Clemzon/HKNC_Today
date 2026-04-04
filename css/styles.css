@@ -28,7 +28,7 @@ body.nav-menu-open {
   color: #ffffff;
   padding: 0.75rem 1rem;
   text-decoration: none;
-  z-index: 2000;
+  z-index: 3000;
 }
 
 .skip-link:focus {
@@ -39,7 +39,51 @@ body.nav-menu-open {
 
 .layout {
   display: flex;
-  min-height: 100vh;
+  min-height: calc(100vh - 64px);
+}
+
+#top-header-bar-container {
+  width: 100%;
+}
+
+.site-header {
+  width: 100%;
+  background: #f4f4f4;
+  border-bottom: 1px solid #d6d6d6;
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+}
+
+.site-header-inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: 64px;
+  padding: 0 1rem;
+}
+
+.site-branding {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.site-title-link {
+  color: #111111;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.site-title-link:hover,
+.site-title-link:focus {
+  text-decoration: underline;
+}
+
+.site-title-link:focus {
+  outline: 3px solid #000000;
+  outline-offset: 2px;
 }
 
 #nav-container {
@@ -75,12 +119,12 @@ footer {
 .site-side-nav-wrapper {
   width: 100%;
   max-width: 220px;
-  min-height: 100vh;
+  min-height: 100%;
   padding: 1rem;
   border-right: 1px solid #d6d6d6;
   background: #f4f4f4;
   position: sticky;
-  top: 0;
+  top: 64px;
 }
 
 .site-side-nav {
@@ -125,15 +169,37 @@ footer {
   background: #dddddd;
 }
 
-.site-nav-toggle {
-  display: none;
-}
-
 .site-nav-overlay {
   display: none;
 }
 
-.site-nav-toggle-icon {
+.site-menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #cfcfcf;
+  border-radius: 0.5rem;
+  background: #ffffff;
+  color: #111111;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.site-menu-toggle:hover,
+.site-menu-toggle:focus {
+  background: #e7e7e7;
+}
+
+.site-menu-toggle:focus {
+  outline: 3px solid #000000;
+  outline-offset: 2px;
+}
+
+.site-menu-toggle-icon {
   font-size: 1.5rem;
   line-height: 1;
   display: inline-block;
@@ -167,6 +233,19 @@ footer {
     padding: 1rem;
   }
 
+  .site-header {
+    position: sticky;
+    top: 0;
+  }
+
+  .site-header-inner {
+    justify-content: flex-start;
+  }
+
+  .site-menu-toggle {
+    display: inline-flex;
+  }
+
   .site-side-nav-wrapper {
     max-width: none;
     min-height: auto;
@@ -176,41 +255,12 @@ footer {
     position: static;
   }
 
-  .site-nav-toggle {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0.75rem;
-    left: 0.75rem;
-    z-index: 1600;
-    width: 48px;
-    height: 48px;
-    margin: 0;
-    padding: 0;
-    border: 1px solid #cfcfcf;
-    border-radius: 0.5rem;
-    background: #f4f4f4;
-    color: #111111;
-    cursor: pointer;
-  }
-
-  .site-nav-toggle:hover,
-  .site-nav-toggle:focus {
-    background: #e7e7e7;
-  }
-
-  .site-nav-toggle:focus {
-    outline: 3px solid #000000;
-    outline-offset: 2px;
-  }
-
   .site-nav-overlay {
     display: block;
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.45);
-    z-index: 1400;
+    z-index: 2200;
   }
 
   .site-nav-overlay[hidden] {
@@ -221,7 +271,7 @@ footer {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1500;
+    z-index: 2300;
     width: min(85vw, 320px);
     height: 100vh;
     overflow-y: auto;
@@ -235,7 +285,7 @@ footer {
   }
 
   .site-side-nav-title {
-    margin-top: 3.5rem;
+    margin-top: 0;
   }
 
   .site-side-nav-wrapper.nav-open .site-side-nav {
@@ -245,7 +295,7 @@ footer {
 
 /* Desktop only */
 @media (min-width: 768px) {
-  .site-nav-toggle {
+  .site-menu-toggle {
     display: none !important;
   }
 
