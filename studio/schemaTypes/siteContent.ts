@@ -37,12 +37,12 @@ export const siteContentType = defineType({
     }),
     defineField({
       name: 'monthlyMenuFile',
-      title: 'Monthly Menu File',
+      title: 'Weekly Menu File',
       type: 'file',
       options: {
-        accept: '.pdf,.doc,.docx',
+        accept: '.pdf,.doc,.docx,.xls,.xlsx,.csv',
       },
-      description: 'Upload the full monthly menu file here.',
+      description: 'Upload the full weekly menu file here.',
     }),
   ],
 })
