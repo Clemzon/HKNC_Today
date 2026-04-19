@@ -36,7 +36,7 @@ export const siteContentType = defineType({
       description: 'Paste the current week’s menu here.',
     }),
     defineField({
-      name: 'monthlyMenuFile',
+      name: 'weeklyMenuFile',
       title: 'Weekly Menu File',
       type: 'file',
       options: {
