@@ -53,46 +53,45 @@ async function loadWeeklyMenu() {
   }
 }
 
-const monthlyMenuQuery = encodeURIComponent(`
+const weeklyMenuFileQuery = encodeURIComponent(`
   *[_type == "siteContent"][0]{
-    "monthlyMenuFileUrl": monthlyMenuFile.asset->url
+    "weeklyMenuFileUrl": weeklyMenuFile.asset->url
   }
 `);
 
-const monthlyMenuUrl = `https://${SANITY_PROJECT_ID}.api.sanity.io/v${SANITY_API_VERSION}/data/query/${SANITY_DATASET}?query=${monthlyMenuQuery}`;
+const weeklyMenuFileUrl = `https://${SANITY_PROJECT_ID}.api.sanity.io/v${SANITY_API_VERSION}/data/query/${SANITY_DATASET}?query=${weeklyMenuFileQuery}`;
 
-async function loadMonthlyMenuFile() {
-  const monthlyLink = document.getElementById("monthly-menu-link");
+async function loadWeeklyMenuFile() {
+  const weeklyLink = document.getElementById("weekly-menu-link");
 
-  if (!monthlyLink) {
+  if (!weeklyLink) {
     return;
   }
 
   try {
-    const response = await fetch(monthlyMenuUrl);
+    const response = await fetch(weeklyMenuFileUrl);
 
     if (!response.ok) {
       throw new Error(`HTTP error ${response.status}`);
     }
 
     const data = await response.json();
-    const fileUrl = data?.result?.monthlyMenuFileUrl || "";
+    const fileUrl = data?.result?.weeklyMenuFileUrl || "";
 
     if (!fileUrl.trim()) {
-      monthlyLink.removeAttribute("href");
-      monthlyLink.textContent = "No monthly menu file has been uploaded yet.";
+      weeklyLink.removeAttribute("href");
+      weeklyLink.textContent = "No weekly menu file has been uploaded yet.";
       return;
     }
 
-    monthlyLink.href = fileUrl;
-    monthlyLink.textContent = "View or download the monthly menu";
+    weeklyLink.href = fileUrl;
+    weeklyLink.textContent = "View or download the weekly menu";
   } catch (error) {
-    console.error("Error loading monthly menu file:", error);
-    monthlyLink.removeAttribute("href");
-    monthlyLink.textContent =
-      "Unable to load the monthly menu file right now.";
+    console.error("Error loading weekly menu file:", error);
+    weeklyLink.removeAttribute("href");
+    weeklyLink.textContent = "Unable to load the weekly menu file right now.";
   }
 }
 
 loadWeeklyMenu();
-loadMonthlyMenuFile();
+loadWeeklyMenuFile();
