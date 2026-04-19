@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HKNC Today - Menu</title>
-    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -14,8 +15,7 @@
       }
 
       header,
-      main,
-      footer {
+      main {
         padding: 1rem;
       }
 
@@ -24,83 +24,37 @@
       }
 
       .page-intro,
-      .menu-controls,
       .weekly-menu-section,
-      .menu-notes-section,
-      .staff-update-section {
+      .monthly-menu-section,
+      .menu-notes-section {
         margin-bottom: 2rem;
       }
 
       .page-intro,
-      .menu-controls,
-      .menu-notes-section,
-      .staff-update-section {
+      .weekly-menu-section,
+      .monthly-menu-section,
+      .menu-notes-section {
         border: 1px solid #d6d6d6;
         border-radius: 12px;
         padding: 1rem;
         background: #ffffff;
-      }
-
-      .status-message {
-        margin-top: 1rem;
-        padding: 0.9rem 1rem;
-        border-left: 4px solid #1f4d8f;
-        background: #f4f8ff;
-        border-radius: 8px;
-      }
-
-      .menu-controls label,
-      .menu-controls select {
-        font-size: 1rem;
-      }
-
-      .menu-controls select {
-        margin-top: 0.5rem;
-        max-width: 280px;
-        width: 100%;
-        padding: 0.6rem;
-      }
-
-      .week-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 1rem;
-      }
-
-      .day-card {
-        border: 1px solid #d6d6d6;
-        border-radius: 12px;
-        padding: 1rem;
-        background: #ffffff;
-      }
-
-      .day-card h3 {
-        margin-top: 0;
-      }
-
-      .meal-block {
-        margin-bottom: 1rem;
-      }
-
-      .meal-block h4 {
-        margin-bottom: 0.35rem;
-      }
-
-      .meal-block p {
-        margin: 0;
-      }
-
-      .day-card.hidden {
-        display: none;
-      }
-
-      .help-text {
-        font-size: 0.95rem;
       }
 
       .small-note {
         font-size: 0.95rem;
         color: #444;
+      }
+
+      #weekly-menu-content ul {
+        padding-left: 1.5rem;
+      }
+
+      #weekly-menu-content li {
+        margin-bottom: 0.5rem;
+      }
+
+      #monthly-menu-link {
+        font-weight: bold;
       }
     </style>
   </head>
@@ -116,8 +70,8 @@
         <header>
           <h1>Campus Menu</h1>
           <p>
-            View the current weekly menu and choose a day to focus on a single
-            menu at a time.
+            View the current weekly menu or download the latest monthly menu
+            file.
           </p>
         </header>
 
@@ -125,45 +79,10 @@
           <section class="page-intro" aria-labelledby="menu-overview-heading">
             <h2 id="menu-overview-heading">Menu Overview</h2>
             <p>
-              This page is designed to support the new weekly menu system. Staff
-              can maintain the weekly menu through Microsoft services, while
-              students can use this page to review the full week or focus on a
-              single day.
+              This page provides quick access to the current campus menu. The
+              weekly menu is listed below, and a monthly menu file is available
+              for viewing or downloading when provided.
             </p>
-            <p>
-              A separate daily publishing system may be added later. For now,
-              the daily view on this page comes from the weekly menu display.
-            </p>
-
-            <div class="status-message" aria-label="Menu status">
-              <p>
-                <strong>Current setup:</strong> The weekly menu structure is in
-                progress and is being prepared for the Microsoft List workflow.
-              </p>
-            </div>
-          </section>
-
-          <section
-            class="menu-controls"
-            aria-labelledby="weekly-menu-controls-heading"
-          >
-            <h2 id="weekly-menu-controls-heading">Weekly Menu Viewer</h2>
-            <p id="menu-viewer-help" class="help-text">
-              Choose a day to view one day at a time, or select
-              <strong>Show Full Week</strong> to read all days together.
-            </p>
-
-            <label for="day-select">Choose a day:</label>
-            <select id="day-select" aria-describedby="menu-viewer-help">
-              <option value="all">Show Full Week</option>
-              <option value="sunday">Sunday</option>
-              <option value="monday">Monday</option>
-              <option value="tuesday">Tuesday</option>
-              <option value="wednesday">Wednesday</option>
-              <option value="thursday">Thursday</option>
-              <option value="friday">Friday</option>
-              <option value="saturday">Saturday</option>
-            </select>
           </section>
 
           <section
@@ -172,259 +91,54 @@
           >
             <h2 id="weekly-menu-heading">This Week’s Menu</h2>
             <p class="small-note">
-              The sections below are placeholders for the weekly menu display.
-              Replace this text with the current published weekly menu as the
-              Microsoft workflow is completed.
+              The current weekly menu will appear below after it has been
+              published.
             </p>
 
-            <div class="week-grid">
-              <article class="day-card" id="sunday" aria-labelledby="sunday-heading">
-                <h3 id="sunday-heading">Sunday</h3>
-
-                <div class="meal-block">
-                  <h4>Breakfast</h4>
-                  <p>Weekly breakfast details will be posted here.</p>
-                </div>
-
-                <div class="meal-block">
-                  <h4>Lunch</h4>
-                  <p>Weekly lunch details will be posted here.</p>
-                </div>
-
-                <div class="meal-block">
-                  <h4>Dinner</h4>
-                  <p>Weekly dinner details will be posted here.</p>
-                </div>
-
-                <div class="meal-block">
-                  <h4>Notes</h4>
-                  <p>No additional notes posted.</p>
-                </div>
-              </article>
-
-              <article class="day-card" id="monday" aria-labelledby="monday-heading">
-                <h3 id="monday-heading">Monday</h3>
-
-                <div class="meal-block">
-                  <h4>Breakfast</h4>
-                  <p>Weekly breakfast details will be posted here.</p>
-                </div>
-
-                <div class="meal-block">
-                  <h4>Lunch</h4>
-                  <p>Weekly lunch details will be posted here.</p>
-                </div>
-
-                <div class="meal-block">
-                  <h4>Dinner</h4>
-                  <p>Weekly dinner details will be posted here.</p>
-                </div>
-
-                <div class="meal-block">
-                  <h4>Notes</h4>
-                  <p>No additional notes posted.</p>
-                </div>
-              </article>
-
-              <article class="day-card" id="tuesday" aria-labelledby="tuesday-heading">
-                <h3 id="tuesday-heading">Tuesday</h3>
-
-                <div class="meal-block">
-                  <h4>Breakfast</h4>
-                  <p>Weekly breakfast details will be posted here.</p>
-                </div>
-
-                <div class="meal-block">
-                  <h4>Lunch</h4>
-                  <p>Weekly lunch details will be posted here.</p>
-                </div>
-
-                <div class="meal-block">
-                  <h4>Dinner</h4>
-                  <p>Weekly dinner details will be posted here.</p>
-                </div>
-
-                <div class="meal-block">
-                  <h4>Notes</h4>
-                  <p>No additional notes posted.</p>
-                </div>
-              </article>
-
-              <article
-                class="day-card"
-                id="wednesday"
-                aria-labelledby="wednesday-heading"
-              >
-                <h3 id="wednesday-heading">Wednesday</h3>
-
-                <div class="meal-block">
-                  <h4>Breakfast</h4>
-                  <p>Weekly breakfast details will be posted here.</p>
-                </div>
-
-                <div class="meal-block">
-                  <h4>Lunch</h4>
-                  <p>Weekly lunch details will be posted here.</p>
-                </div>
-
-                <div class="meal-block">
-                  <h4>Dinner</h4>
-                  <p>Weekly dinner details will be posted here.</p>
-                </div>
-
-                <div class="meal-block">
-                  <h4>Notes</h4>
-                  <p>No additional notes posted.</p>
-                </div>
-              </article>
-
-              <article
-                class="day-card"
-                id="thursday"
-                aria-labelledby="thursday-heading"
-              >
-                <h3 id="thursday-heading">Thursday</h3>
-
-                <div class="meal-block">
-                  <h4>Breakfast</h4>
-                  <p>Weekly breakfast details will be posted here.</p>
-                </div>
-
-                <div class="meal-block">
-                  <h4>Lunch</h4>
-                  <p>Weekly lunch details will be posted here.</p>
-                </div>
-
-                <div class="meal-block">
-                  <h4>Dinner</h4>
-                  <p>Weekly dinner details will be posted here.</p>
-                </div>
-
-                <div class="meal-block">
-                  <h4>Notes</h4>
-                  <p>No additional notes posted.</p>
-                </div>
-              </article>
-
-              <article class="day-card" id="friday" aria-labelledby="friday-heading">
-                <h3 id="friday-heading">Friday</h3>
-
-                <div class="meal-block">
-                  <h4>Breakfast</h4>
-                  <p>Weekly breakfast details will be posted here.</p>
-                </div>
-
-                <div class="meal-block">
-                  <h4>Lunch</h4>
-                  <p>Weekly lunch details will be posted here.</p>
-                </div>
-
-                <div class="meal-block">
-                  <h4>Dinner</h4>
-                  <p>Weekly dinner details will be posted here.</p>
-                </div>
-
-                <div class="meal-block">
-                  <h4>Notes</h4>
-                  <p>No additional notes posted.</p>
-                </div>
-              </article>
-
-              <article
-                class="day-card"
-                id="saturday"
-                aria-labelledby="saturday-heading"
-              >
-                <h3 id="saturday-heading">Saturday</h3>
-
-                <div class="meal-block">
-                  <h4>Breakfast</h4>
-                  <p>Weekly breakfast details will be posted here.</p>
-                </div>
-
-                <div class="meal-block">
-                  <h4>Lunch</h4>
-                  <p>Weekly lunch details will be posted here.</p>
-                </div>
-
-                <div class="meal-block">
-                  <h4>Dinner</h4>
-                  <p>Weekly dinner details will be posted here.</p>
-                </div>
-
-                <div class="meal-block">
-                  <h4>Notes</h4>
-                  <p>No additional notes posted.</p>
-                </div>
-              </article>
+            <div id="weekly-menu-content">
+              <p>Loading this week’s menu...</p>
             </div>
+          </section>
+
+          <section
+            class="monthly-menu-section"
+            aria-labelledby="monthly-menu-heading"
+          >
+            <h2 id="monthly-menu-heading">Download the Monthly Menu</h2>
+            <p>
+              Use the link below to view or download the latest monthly menu
+              file.
+            </p>
+
+            <p id="monthly-menu-link-container">
+              <a
+                href="#"
+                id="monthly-menu-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Loading monthly menu file...
+              </a>
+            </p>
           </section>
 
           <section
             class="menu-notes-section"
             aria-labelledby="menu-notes-heading"
           >
-            <h2 id="menu-notes-heading">Important Notes</h2>
+            <h2 id="menu-notes-heading">Important Note</h2>
             <p>
-              Menu items are subject to change. Please check back regularly for
-              updates.
-            </p>
-            <p>
-              If a meal listed on this page does not match what is being served,
-              please follow the dining hall’s posted information or ask staff for
-              the latest update.
-            </p>
-          </section>
-
-          <section
-            class="staff-update-section"
-            aria-labelledby="staff-update-heading"
-          >
-            <h2 id="staff-update-heading">Staff Update Process</h2>
-            <p>
-              Staff should continue using the Microsoft weekly workflow for menu
-              publishing.
-            </p>
-            <ol>
-              <li>Update the Weekly Menu list in Microsoft Lists.</li>
-              <li>Confirm the published weekly information is correct.</li>
-              <li>Check the website display for accuracy.</li>
-            </ol>
-            <p class="small-note">
-              This page is now structured to support the weekly menu process
-              without requiring large manual HTML edits each time.
+              Menu items may change. If the menu on this page does not match
+              what is being served, please follow the dining hall’s posted
+              information or ask staff for the latest update.
             </p>
           </section>
         </main>
       </div>
     </div>
 
-    <script src="../js/top_header_bar.js"></script>
-    <script src="../js/nav.js"></script>
-    <script>
-      const daySelect = document.getElementById("day-select");
-      const dayCards = document.querySelectorAll(".day-card");
-
-      function filterMenuDays(selectedValue) {
-        dayCards.forEach((card) => {
-          if (selectedValue === "all") {
-            card.classList.remove("hidden");
-            return;
-          }
-
-          if (card.id === selectedValue) {
-            card.classList.remove("hidden");
-          } else {
-            card.classList.add("hidden");
-          }
-        });
-      }
-
-      daySelect.addEventListener("change", function () {
-        filterMenuDays(this.value);
-      });
-
-      filterMenuDays("all");
-    </script>
+    <script src="/js/top_header_bar.js"></script>
+    <script src="/js/nav.js"></script>
+    <script src="/js/sanity-menu.js"></script>
   </body>
 </html>

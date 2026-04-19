@@ -24,7 +24,7 @@ export const siteContentType = defineType({
       title: 'Monthly Activities File',
       type: 'file',
       options: {
-        accept: '.pdf,.doc,.docx',
+        accept: '.pdf,.doc,.docx,.xls,.xlsx,.csv',
       },
       description: 'Upload the full monthly activities file here.',
     }),
