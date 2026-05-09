@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HKNC Town Hall Committee</title>
-    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
   </head>
 
   <body>
@@ -17,64 +17,95 @@
       <div class="content-area">
         <header>
           <h1>HKNC Town Hall Committee</h1>
-          <p>
-            Welcome to the Town Hall Committee page. This page shares information about
-            upcoming meetings, discussion topics, and helpful HKNC resources.
-          </p>
+          <div id="townhall-page-intro">
+            <p>Loading Town Hall Committee introduction...</p>
+          </div>
         </header>
 
         <main id="main-content">
           <section aria-labelledby="upcoming-meeting-heading">
             <h2 id="upcoming-meeting-heading">Upcoming Meeting</h2>
-            <p><strong>Date:</strong> April 9, 2026</p>
-            <p><strong>Time:</strong> 1:45 - 2:30 PM</p>
-            <p><strong>Location:</strong>Lounge - Resident Building </p>
+
+            <div id="townhall-meeting-details">
+              <p>
+                <strong>Date:</strong>
+                <span id="townhall-meeting-date">Loading date...</span>
+              </p>
+              <p>
+                <strong>Time:</strong>
+                <span id="townhall-meeting-time">Loading time...</span>
+              </p>
+              <p>
+                <strong>Location:</strong>
+                <span id="townhall-meeting-location">Loading location...</span>
+              </p>
+            </div>
 
             <h3>Topics for Discussion</h3>
-            <ul>
-              <li>Surveys have begun rolling out. </li>
-              <li>White board for cafeteria(signage)</li>
-              <li>Student concerns and suggestions</li>
-              <li>Department updates</li>
-              <li>Survey Development</li>
-              <p>
-                Each department is asked to draft 5 - 10 survey questions. These
-                questions are intended to provide feedback for each department. The
-                surveys will be hosted by Microsoft Forms and will link each survey to
-                a QR code as well as i web link on this page. Look for more details
-                coming soon.
-              </p>
-              <li>Activities and student engagement</li>
-              <li>Campus accessibility and improvements</li>
-            </ul>
+            <div id="townhall-discussion-topics">
+              <p>Loading discussion topics...</p>
+            </div>
           </section>
 
           <section aria-labelledby="resources-heading">
             <h2 id="resources-heading">HKNC Resources</h2>
-            <p>
-              This section provides access to important resources for students. Survey
-              links can be added below as they become available.
-            </p>
+
+            <div id="townhall-resources-intro">
+              <p>Loading resource information...</p>
+            </div>
 
             <h3>Student Surveys</h3>
             <ul>
-              <li><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAqLfuONUQkpPRjEwNzNQNlI5RlE2VUhIWElYQ0taVi4u">Dorm Survey</a></li>
-              <li><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAqLfuONUMFZOMEo4NVZSTFVGNEY1RTYzVjBBWjdKUi4u">Grounds and Property Survey</a></li>
-              <li><a href="#">Activities Survey</a></li>
-              <li><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAqLfuONURDYyUFVGWjBQVVE0RkxYR00yWldZWDZQQy4u">Training Department Survey</a></li>
-              <li><a href="#">Caffeteria Services Survey</a></li>
-            <li><a href="">Transportation Services Surey</a></li>
+              <li>
+                <a
+                  href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAqLfuONUQkpPRjEwNzNQNlI5RlE2VUhIWElYQ0taVi4u"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Dorm Survey
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAqLfuONUMFZOMEo4NVZSTFVGNEY1RTYzVjBBWjdKUi4u"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Grounds and Property Survey
+                </a>
+              </li>
+              <li>
+                <a href="#">Activities Survey</a>
+              </li>
+              <li>
+                <a
+                  href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAqLfuONURDYyUFVGWjBQVVE0RkxYR00yWldZWDZQQy4u"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Training Department Survey
+                </a>
+              </li>
+              <li>
+                <a href="#">Cafeteria Services Survey</a>
+              </li>
+              <li>
+                <a href="#">Transportation Services Survey</a>
+              </li>
             </ul>
           </section>
         </main>
 
         <footer>
-          <p></p>
+          <div id="townhall-footer-content">
+            <p></p>
+          </div>
         </footer>
       </div>
     </div>
 
-    <script src="../js/top_header_bar.js"></script>
-    <script src="../js/nav.js"></script>
+    <script src="/js/top_header_bar.js"></script>
+    <script src="/js/nav.js"></script>
+    <script src="/js/sanity-townhall.js"></script>
   </body>
 </html>

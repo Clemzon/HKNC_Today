@@ -3,7 +3,7 @@ const SANITY_DATASET = "production";
 const SANITY_API_VERSION = "2025-01-01";
 
 const weeklyMenuQuery = encodeURIComponent(`
-  *[_type == "siteContent"][0]{
+  *[_type == "menuContent"][0]{
     weeklyMenu
   }
 `);
@@ -54,7 +54,7 @@ async function loadWeeklyMenu() {
 }
 
 const weeklyMenuFileQuery = encodeURIComponent(`
-  *[_type == "siteContent"][0]{
+  *[_type == "menuContent"][0]{
     "weeklyMenuFileUrl": weeklyMenuFile.asset->url
   }
 `);
